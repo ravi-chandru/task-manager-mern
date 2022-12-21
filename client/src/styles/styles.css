@@ -80,7 +80,6 @@ button{
     border:transparent;
     color:white;
     text-transform: capitalize;
-    letter-spacing: 1px;
     border-radius:2px;
     cursor:pointer;
 }
