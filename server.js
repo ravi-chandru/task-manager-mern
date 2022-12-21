@@ -25,7 +25,9 @@ app.use(errorHanler);
 
 const startServer = () => {
 
-    connectDB(process.env.MONGO_URI)
+    const mongo = 'mongodb+srv://Chandramohan:Jarvis666@cluster0.bfxazfi.mongodb.net/Task_Manager_mern?retryWrites=true&w=majority'
+
+    connectDB(mongo)
     .then(() => {
       console.log('Connected to DB');
       app.listen(PORT, () => console.log(`Server started successfully at ${PORT}`))
