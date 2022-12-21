@@ -52,11 +52,13 @@ const updateTask = async (req,res,next) => {
 
     const {id} = req.params;
 
+
+
     if(!isValidObjectId(id)) return next(createCustomError('Invalid id',404))
 
     const _task = await task.findByIdAndUpdate(id,req.body);
 
-    if(_task) return next(createCustomError('No task with id found',404));
+    if(!_task) return next(createCustomError('No task with id found',404));
 
     res.send("Task Updated Successfully");
 }

@@ -1,0 +1,131 @@
+*,
+::after,
+::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size:62.5%;
+    font-family:'Inconsolata', monospace;
+    font-weight:400;
+
+}
+
+#root{
+    width:100%;
+    min-height:100vh;
+    background-color: #f2f4f8;
+}
+
+.app-container{
+    width:inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.form-container{
+    font-size:1.5rem;
+    margin-top:4rem;
+    width:90vw;
+    max-width:600px;
+    background-color:white;
+    height:max-content;
+    gap:20px;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius:10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 20px;
+    color:rgba(0,0,0,0.5);
+    font-size:1.5rem;
+}
+
+form{
+    padding:10px;
+    display: flex;
+    gap:10px;
+    justify-content: flex-start;
+   
+}
+
+input[type="text"]{
+    flex-basis:80%;
+    height:30px;
+    background-color:#f2f4f8;
+    border:1px solid  #dbe0ea;
+    padding:5px;
+    font-size:1rem;
+}
+
+input:focus{
+    outline:none;
+}
+
+button{
+    padding:5px;
+    flex-grow: 1;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    text-transform: capitalize;
+    background-color: #645cff;
+    border:transparent;
+    color:white;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border-radius:2px;
+    cursor:pointer;
+}
+
+.task-list-container{
+    font-size:1.5rem;
+    margin-top:4rem;
+    width:90vw;
+    max-width:600px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+
+.show-task-container{
+    display: flex;
+    height:max-content;
+    align-items: center;
+    background-color:white;
+    padding:20px;
+    border-radius: 10px;
+    box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+
+}
+
+.toast-message{
+    color:#645cff;
+}
+
+.edit, .delete{
+    font-size:1rem;
+    font-weight:300;
+}
+
+.icon-container{
+
+    display: flex;
+    gap:10px;
+}
+   
+.title{
+    font-size:1rem;
+    font-weight:300;
+    color:rgba(0,0,0,0.8);
+}
+

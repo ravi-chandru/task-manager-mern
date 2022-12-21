@@ -4,12 +4,13 @@ require('dotenv').config();
 const connectDB = require('./db/connect');
 const taskRouter = require('./routes/taskRoute')
 const errorHanler = require('./middlewares/error-handler')
+const cors = require('cors');
 const PORT = process.env.port || 3000;
 
+app.use(cors( {origin: '*'}));
 app.use(express.json());
 
 app.use('/api/v1/tasks',taskRouter);
-
 
 app.use(errorHanler);
 
