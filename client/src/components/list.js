@@ -6,7 +6,7 @@ const List = ({task,onLoad,onUpdate,onDelete}) => {
 
     const fetch = async () => {
 
-        await axios.get('http://localhost:5000/api/v1/tasks/')
+        await axios.get('/api/v1/tasks/')
         .then((response) => {
             onLoad(response.data)
         })

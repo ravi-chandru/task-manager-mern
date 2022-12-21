@@ -29,7 +29,7 @@ const App = () => {
 
     const addTask = async (title) => {
 
-        await axios.post('http://localhost:5000/api/v1/tasks',{
+        await axios.post('/api/v1/tasks',{
         title
        })
        .then((response) =>
@@ -43,7 +43,7 @@ const App = () => {
     const updataTask = async (data) => {
 
         const {_id:id} = data;
-        const url = `http://localhost:5000/api/v1/tasks/${id}`;
+        const url = `/api/v1/tasks/${id}`;
         await axios.patch(url,data)
                     .then(() => {
                         showToastMessage('update');
@@ -53,7 +53,7 @@ const App = () => {
 
     const deleteTask = async (id) => {
 
-        const url = `http://localhost:5000/api/v1/tasks/${id}`;
+        const url = `/api/v1/tasks/${id}`;
         const updatedTask = task.filter((el) => el._id !== id);
         await axios.delete(url)
                    .then(() => {
